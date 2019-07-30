@@ -1,0 +1,12 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %>
+<%= link_to "Edit Task", edit_path %>
+</p>
+<p class="task">
+  <%= check_box('task', @task.id, {checked: @task.completed}) %>
+  <%= @task.completed ? 'this task done' : 'task is not done' %>
+</p>
+
+<hr>
+
+<%= link_to "Go back to list", tasks_path %>
